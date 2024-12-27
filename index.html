@@ -4,26 +4,14 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + TS</title>
+    <title>Deep Work Dashboard</title>
   </head>
   <body>
     <main
       id="app"
       class="h-screen grid grid-rows-2 grid-cols-2 gap-4 p-4 snap-start"
     >
-      <div class="border border-red-500 overflow-x-hidden">
-        <iframe
-          title="timer"
-          loading="lazy"
-          sandbox="allow-scripts allow-same-origin allow-presentation"
-          width="100%"
-          height="100%"
-          class="object-contain w-full h-full"
-          id="timer"
-        >
-        </iframe>
-      </div>
-      <div class="border border-red-500">
+      <div class="border border-red-500" style="grid-row: 1 / -1">
         <iframe
           title="metronome"
           loading="lazy"
@@ -32,61 +20,72 @@
           height="254"
           class="object-contain w-full h-full"
           id="metronome"
-          src="https://www.google.com/search?igu=1&q=metronome"
+          style="zoom: 0.7"
+          src="https://pomofocus.io/"
         >
         </iframe>
       </div>
       <div class="border border-red-500">
         <iframe
-          title="stopwatch"
-          loading="lazy"
-          sandbox="allow-scripts allow-same-origin allow-presentation"
-          width="100%"
-          height="254"
-          class="object-contain w-full h-full"
-          id="stopwatch"
-          src="https://www.google.com/search?igu=1&q=stopwatch"
-        >
-        </iframe>
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/KxpViLLzlrc?si=xvT0ZytFGRAlH4Hj"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+          class="object-contain max-w-full max-h-full"
+        ></iframe>
       </div>
-      <div>
+      <div class="border flex-col p-2 overflow-hidden space-y-2">
+        <a
+          href="https://dontbreakthechain.com/last-four-weeks/177065"
+          class="block text-blue-400 cursor-pointer"
+          target="_blank"
+          >Don't break the chain</a
+        >
+        <a
+          href="https://docs.google.com/spreadsheets/d/13GpbGQ1a-En38UF8jTYWgXUnTVotEOYnLvjW6eC-5xg/edit#gid=0"
+          class="block text-blue-400 cursor-pointer"
+          target="_blank"
+          >Deep work log</a
+        >
         <textarea
           id="notes"
-          class="border border-gray-500 w-full h-full text-sm p-1"
+          class="border border-gray-500 text-sm p-1 w-full overflow-y-auto max-h-full"
           placeholder="Notes"
         ></textarea>
       </div>
     </main>
-    <section
-      id="guitar"
-      class="h-screen grid grid-rows-2 grid-cols-2 gap-4 p-4 snap-start"
-    >
-      <div class="border border-red-500">
+    <section id="guitar" class="h-screen p-4 snap-start">
+      <div class="border border-red-500 h-full w-full">
         <iframe
           title="fretboard-guesser"
           loading="lazy"
           sandbox="allow-scripts allow-same-origin allow-presentation"
           width="100%"
-          height="254"
+          height="100%"
           class="object-contain w-full h-full"
-          style="zoom: 0.8"
           id="fretboard-guesser"
-          src="https://www.musictheory.net/exercises/fretboard"
+          src="https://aadilmallickblog.com/posts/productivity-guide/#deep-work-routine"
         >
         </iframe>
       </div>
-      <div class="border border-red-500" id="random-scale-container">
+    </section>
+    <section class="h-screen grid grid-rows-2 grid-cols-2 gap-4 p-4 snap-start">
+      <div class="border border-red-500">
         <iframe
-          title="random-scale"
-          loading="lazy"
-          sandbox="allow-scripts allow-same-origin allow-presentation"
-          width="100%"
-          height="254"
-          class="object-contain w-full h-full"
-          id="random-scale"
-          src="https://www.therandomscalemachine.com/"
-        >
-        </iframe>
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/tAIiXRZNh9E?si=JlRomoGSja7Q1ags"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+          class="object-contain max-w-full max-h-full"
+        ></iframe>
       </div>
     </section>
     <script type="module" src="/src/main.ts"></script>
